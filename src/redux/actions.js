@@ -1,4 +1,4 @@
-import { ADD_TODO, DELETE_TODO, IS_COMPLETE } from "./actionTypes";
+import { ADD_TODO, DELETE_TODO, EDIT_TODO, IS_COMPLETE } from "./actionTypes";
 
 export const addTodo = (payload) => {
   return {
@@ -18,3 +18,10 @@ export const isComplete = (payload) => {
     payload,
   };
 };
+
+export const EditTask = (payload) =>{
+  return{
+    type: EDIT_TODO,
+    payload,
+  };
+}

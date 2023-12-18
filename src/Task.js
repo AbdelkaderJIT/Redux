@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { deleteTodo } from "./redux/actions";
 import { isComplete } from "./redux/actions";
+import { EditComp } from "./EditComp";
 const Task = ({ el }) => {
   const dispatch = useDispatch();
   const change = () => {
@@ -22,6 +23,7 @@ const Task = ({ el }) => {
         remove
       </button>
       <button onClick={change}>isDone</button>
+      <EditComp el = {el} />
     </div>
   );
 };
